@@ -6,15 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "re:build": "rescript build",
+    "re:start": "rescript build -w "
   },
   "dependencies": {
+    "@rescript/react": "^0.10.3",
     "next": "12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
     "eslint": "8.10.0",
-    "eslint-config-next": "12.1.0"
+    "eslint-config-next": "12.1.0",
+    "rescript": "^9.1.4"
   }
 }

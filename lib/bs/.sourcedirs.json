@@ -1,0 +1,1 @@
+{ "dirs" : [ "bindings" , "components" , "pages" , "pages\\api" ] , "pkgs" : [ [ "@rescript\\react" , "C:\\Users\\gabri\\pjct\\renext-app\\node_modules\\@rescript\\react" ] ] , "generated" : [] }
