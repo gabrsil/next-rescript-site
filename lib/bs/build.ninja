@@ -4,7 +4,7 @@ rule astj
   command = "C:\Users\gabri\pjct\renext-app\node_modules\rescript\win32\bsc.exe"  -bs-v 9.1.4 -bs-jsx 3  -absname -bs-ast -o $out $i
 o bindings\Next.ast : astj ..\..\bindings\Next.res
 rule deps
-  command = "C:\Users\gabri\pjct\renext-app\node_modules\rescript\win32\bsb_helper.exe" -hash ca491b0f9251b4a62a690e05b26af962 $in
+  command = "C:\Users\gabri\pjct\renext-app\node_modules\rescript\win32\bsb_helper.exe" -hash 48fafb7a5013bee7583272dba92b2e9f $in
   restat = 1
 o bindings\Next.d : deps bindings\Next.ast
 rule mij
@@ -12,9 +12,30 @@ rule mij
   dyndep = 1
   restat = 1
 o bindings\Next.cmj bindings\Next.cmi ..\..\bindings\Next.js : mij bindings\Next.ast
+o bindings\Chakra.ast : astj ..\..\bindings\Chakra.res
+o bindings\Chakra.d : deps bindings\Chakra.ast
+o bindings\Chakra.cmj bindings\Chakra.cmi ..\..\bindings\Chakra.js : mij bindings\Chakra.ast
+o bindings\Emotion.ast : astj ..\..\bindings\Emotion.res
+o bindings\Emotion.d : deps bindings\Emotion.ast
+o bindings\Emotion.cmj bindings\Emotion.cmi ..\..\bindings\Emotion.js : mij bindings\Emotion.ast
 o pages\_app.ast : astj ..\..\pages\_app.res
 o pages\_app.d : deps pages\_app.ast
 o pages\_app.cmj pages\_app.cmi ..\..\pages\_app.js : mij pages\_app.ast
+o pages\about.ast : astj ..\..\pages\about.res
+o pages\about.d : deps pages\about.ast
+o pages\about.cmj pages\about.cmi ..\..\pages\about.js : mij pages\about.ast
 o pages\index.ast : astj ..\..\pages\index.res
 o pages\index.d : deps pages\index.ast
 o pages\index.cmj pages\index.cmi ..\..\pages\index.js : mij pages\index.ast
+o pages\posts.ast : astj ..\..\pages\posts.res
+o pages\posts.d : deps pages\posts.ast
+o pages\posts.cmj pages\posts.cmi ..\..\pages\posts.js : mij pages\posts.ast
+o pages\_appss.ast : astj ..\..\pages\_appss.res
+o pages\_appss.d : deps pages\_appss.ast
+o pages\_appss.cmj pages\_appss.cmi ..\..\pages\_appss.js : mij pages\_appss.ast
+o pages\projects.ast : astj ..\..\pages\projects.res
+o pages\projects.d : deps pages\projects.ast
+o pages\projects.cmj pages\projects.cmi ..\..\pages\projects.js : mij pages\projects.ast
+o pages\Container.ast : astj ..\..\pages\Container.res
+o pages\Container.d : deps pages\Container.ast
+o pages\Container.cmj pages\Container.cmi ..\..\pages\Container.js : mij pages\Container.ast
