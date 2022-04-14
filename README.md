@@ -1,7 +1,7 @@
 
 # What is this ?
 
-This is a project of my personal website, using the tecnologies Rescript-Reactjs with next NextJs.
+This is a project of my personal website, using the tecnologies Rescript-Reactjs with next.
 
 # Goals
 - [ ] Don't drop it
