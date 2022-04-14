@@ -2,27 +2,23 @@
 
 import * as React from "react";
 
-var name = "Hello world";
-
-var element = name !== undefined ? React.createElement("div", undefined, "Hello " + name) : null;
-
 function Index$default(Props) {
-  return React.createElement("div", {
-              style: {
-                backgroundColor: "#000",
-                height: "100vh",
-                width: "100%"
-              }
-            }, element);
+  return React.createElement("div", undefined, React.createElement("p", {
+                  style: {
+                    color: "#FFF",
+                    fontSize: "2.1rem",
+                    textAlign: "justify",
+                    textDecoration: "underline",
+                    textDecorationColor: "#ad2f40"
+                  }
+                }, "Lorem Ipsum is simply dummy text of the printing and typesetting industry. \r\n                Lorem Ipsum has been the industry's standard dummy text"));
 }
 
 var $$default = Index$default;
 
 export {
-  name ,
-  element ,
   $$default ,
   $$default as default,
   
 }
-/* element Not a pure module */
+/* react Not a pure module */

@@ -1,12 +1,16 @@
-let name = Some("Hello world")
-
-let element = switch name {
-    | Some(name) => <div> {React.string("Hello " ++ name)} </div>
-    | None => React.null
-} 
-
 @react.component
+let default = (): React.element => {
 
-let default = () => {
-    <div style={ReactDOM.Style.make(~backgroundColor="#000", ~width="100%", ~height="100vh", ())}>element</div>
+    <div>
+      <p style={ReactDOM.Style.make(
+                    ~color="#FFF",        
+                    ~fontSize="2.1rem",  
+                    ~textAlign="justify",
+                    ~textDecoration="underline",        
+                    ~textDecorationColor="#ad2f40",  
+                    ()
+                )}>{React.string("Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text")}</p>
+    </div>
+
 }

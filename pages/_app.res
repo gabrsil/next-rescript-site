@@ -1,12 +1,25 @@
 %%raw("import '../styles/globals.css'")
-module MyApp = {
-    @react.component @module("./index")
-    external make: () => React.element = "default"
+type pageProps
+
+module PageComponent = {
+    type t = React.component<pageProps>
 }
 
-@react.component
-let default = () => {
-    <div>    
-    <MyApp/>
-    </div>
+module Container = {
+    @react.component @module("./Container")
+    external make: (~children: React.element) => React.element = "default"
+}
+
+type props = {
+    @as("Component")
+    component: PageComponent.t,
+    pageProps: pageProps
+}
+
+let default = (props: props): React.element => {
+    let { component, pageProps } = props    
+    
+    let content = React.createElement(component, pageProps)
+
+    <Container> content </Container>
 }
